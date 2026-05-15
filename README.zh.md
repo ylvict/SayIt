@@ -6,6 +6,7 @@
 > [**English Docs → README.md**](README.md)
 
 [![NuGet](https://img.shields.io/nuget/v/SayIt)](https://www.nuget.org/packages/SayIt)
+[![build](https://github.com/ylvict/SayIt/actions/workflows/ci.yml/badge.svg)](https://github.com/ylvict/SayIt/actions/workflows/ci.yml)
 
 ```shell
 dotnet add package SayIt

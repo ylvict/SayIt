@@ -36,20 +36,10 @@ namespace SayIt.Internal
                 };
 
                 if (item.TryGetProperty("SuggestedCodec", out var sc))
-                {
-                    var codecs = new List<string>();
-                    foreach (var c in sc.EnumerateArray())
-                        codecs.Add(c.GetString() ?? "");
-                    voice.SuggestedCodec = codecs;
-                }
+                    voice.SuggestedCodec = ParseStringList(sc);
 
                 if (item.TryGetProperty("VoicePersonalities", out var vp))
-                {
-                    var pers = new List<string>();
-                    foreach (var p in vp.EnumerateArray())
-                        pers.Add(p.GetString() ?? "");
-                    voice.VoicePersonalities = pers;
-                }
+                    voice.VoicePersonalities = ParseStringList(vp);
 
                 list.Add(voice);
             }
@@ -59,5 +49,21 @@ namespace SayIt.Internal
 
         private static string TryGetString(JsonElement el, string key) =>
             el.TryGetProperty(key, out var p) ? p.GetString() ?? "" : "";
+
+        private static IReadOnlyList<string> ParseStringList(JsonElement el)
+        {
+            if (el.ValueKind == JsonValueKind.String)
+                return new[] { el.GetString() ?? "" };
+
+            if (el.ValueKind == JsonValueKind.Array)
+            {
+                var list = new List<string>(el.GetArrayLength());
+                foreach (var item in el.EnumerateArray())
+                    list.Add(item.GetString() ?? "");
+                return list;
+            }
+
+            return System.Array.Empty<string>();
+        }
     }
 }

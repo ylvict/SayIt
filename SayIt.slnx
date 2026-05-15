@@ -11,4 +11,7 @@
   <Folder Name="/src/">
     <Project Path="src/SayIt/SayIt.csproj" />
   </Folder>
+  <Folder Name="/tests/">
+    <Project Path="tests/SayIt.SmokeTest/SayIt.SmokeTest.csproj" />
+  </Folder>
 </Solution>

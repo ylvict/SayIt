@@ -1,0 +1,14 @@
+<Solution>
+  <Folder Name="/samples/">
+    <Project Path="samples/SayIt.Samples.AdvancedConfig/SayIt.Samples.AdvancedConfig.csproj" />
+    <Project Path="samples/SayIt.Samples.Batch/SayIt.Samples.Batch.csproj" />
+    <Project Path="samples/SayIt.Samples.File/SayIt.Samples.File.csproj" />
+    <Project Path="samples/SayIt.Samples.Playback/SayIt.Samples.Playback.csproj" />
+    <Project Path="samples/SayIt.Samples.Stream/SayIt.Samples.Stream.csproj" />
+    <Project Path="samples/SayIt.Samples.StreamingInput/SayIt.Samples.StreamingInput.csproj" />
+    <Project Path="samples/SayIt.Samples.VoiceList/SayIt.Samples.VoiceList.csproj" />
+  </Folder>
+  <Folder Name="/src/">
+    <Project Path="src/SayIt/SayIt.csproj" />
+  </Folder>
+</Solution>

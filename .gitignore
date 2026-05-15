@@ -1,0 +1,47 @@
+# .NET
+bin/
+obj/
+*.csproj.user
+*.suo
+*.sln.docstates
+
+# Visual Studio
+.vs/
+*.user
+*.userosscache
+*.userprefs
+
+# JetBrains Rider
+.idea/
+*.sln.iml
+
+# VS Code
+.vscode/
+
+# NuGet
+packages/
+*.nupkg
+*.snupkg
+
+# Build results
+[Dd]ebug/
+[Rr]elease/
+x64/
+x86/
+[Ww][Ii][Nn]32/
+[Aa][Rr][Mm]/
+[Aa][Rr][Mm]64/
+bld/
+
+# Sample generated files
+samples/**/*.mp3
+samples/**/*.wav
+
+# OS
+Thumbs.db
+.DS_Store
+desktop.ini
+
+# Temp
+*.tmp
+*.log

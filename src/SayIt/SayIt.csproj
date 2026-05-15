@@ -1,0 +1,24 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+  <PropertyGroup>
+    <TargetFramework>netstandard2.1</TargetFramework>
+    <Nullable>enable</Nullable>
+    <LangVersion>9</LangVersion>
+    <RootNamespace>SayIt</RootNamespace>
+    <AssemblyName>SayIt</AssemblyName>
+    <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
+    <PackageId>SayIt</PackageId>
+    <Version>1.0.0</Version>
+    <Authors>SayIt</Authors>
+    <Description>Zero-dependency .NET text-to-speech SDK using Microsoft Edge's free online voices.</Description>
+    <PackageProjectUrl>https://github.com/sayit/sayit</PackageProjectUrl>
+    <PackageLicenseExpression>MIT</PackageLicenseExpression>
+    <RepositoryUrl>https://github.com/sayit/sayit</RepositoryUrl>
+    <PackageTags>tts;text-to-speech;speech;edge;voice</PackageTags>
+    <IncludeSymbols>true</IncludeSymbols>
+    <SymbolPackageFormat>snupkg</SymbolPackageFormat>
+  </PropertyGroup>
+  <ItemGroup>
+    <PackageReference Include="System.Text.Json" Version="8.0.5" />
+    <PackageReference Include="System.Threading.Tasks.Extensions" Version="4.5.4" />
+  </ItemGroup>
+</Project>

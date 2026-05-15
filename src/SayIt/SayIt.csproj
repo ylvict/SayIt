@@ -7,13 +7,14 @@
     <AssemblyName>SayIt</AssemblyName>
     <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
     <PackageId>SayIt</PackageId>
-    <Version>1.0.2</Version>
+    <Version>1.0.4</Version>
     <PackageReadmeFile>README.md</PackageReadmeFile>
-    <Authors>SayIt</Authors>
+    <Authors>ylvict</Authors>
     <Description>Zero-dependency .NET text-to-speech SDK using Microsoft Edge's free online voices.</Description>
-    <PackageProjectUrl>https://github.com/sayit/sayit</PackageProjectUrl>
+    <PackageProjectUrl>https://github.com/ylvict/SayIt</PackageProjectUrl>
     <PackageLicenseExpression>MIT</PackageLicenseExpression>
-    <RepositoryUrl>https://github.com/sayit/sayit</RepositoryUrl>
+    <RepositoryUrl>https://github.com/ylvict/SayIt</RepositoryUrl>
+    <RepositoryType>git</RepositoryType>
     <PackageTags>tts;text-to-speech;speech;edge;voice</PackageTags>
     <IncludeSymbols>true</IncludeSymbols>
     <SymbolPackageFormat>snupkg</SymbolPackageFormat>

@@ -4,6 +4,7 @@ obj/
 *.csproj.user
 *.suo
 *.sln.docstates
+*.lscache
 
 # Visual Studio
 .vs/

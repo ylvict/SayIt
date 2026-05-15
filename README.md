@@ -12,7 +12,7 @@ No API keys, no registration, no external dependencies.
 dotnet add package SayIt
 ```
 
-## Quick Start
+## 🚀 Quick Start
 
 ```csharp
 using SayIt;
@@ -28,7 +28,7 @@ await SayIt.SaveAsync("Bonjour", "greeting.mp3",
     new SayItConfig().WithVoice("fr-FR-DeniseNeural"));
 ```
 
-## Features
+## ✨ Features
 
 - **Zero configuration** — no API keys, no sign-up, no account
 - **Zero external dependencies** — only uses `System.Net.WebSockets` and `System.Text.Json`
@@ -38,9 +38,9 @@ await SayIt.SaveAsync("Bonjour", "greeting.mp3",
 - **Streaming input** — feed text as `IAsyncEnumerable<string>` (e.g. LLM tokens)
 - **Adjustable** — control rate, pitch, volume, output format
 
-## API
+## 📖 API
 
-### Static API (one-liners)
+### ⚡ Static API (one-liners)
 
 | Method | Description |
 |--------|-------------|
@@ -49,7 +49,7 @@ await SayIt.SaveAsync("Bonjour", "greeting.mp3",
 | `SayIt.StreamAsync(IAsyncEnumerable<string>, config?, ct?)` | Stream text chunks → audio stream |
 | `SayIt.ListVoicesAsync(ct?)` | List all available voices |
 
-### Instance API (reusable config)
+### 🔧 Instance API (reusable config)
 
 ```csharp
 var speaker = new SayItSpeaker(
@@ -65,7 +65,7 @@ await foreach (var chunk in speaker.StreamChunksAsync("Hi"))
     // process chunk
 ```
 
-### Configuration
+### ⚙️ Configuration
 
 ```csharp
 var config = new SayItConfig()
@@ -77,7 +77,7 @@ var config = new SayItConfig()
     .WithTimeout(60);                           // Timeout in seconds
 ```
 
-### Output Formats
+### 🎵 Output Formats
 
 - `OutputFormat.Mp3_24Khz_96Kbps` (default)
 - `OutputFormat.Mp3_24Khz_48Kbps`
@@ -86,7 +86,7 @@ var config = new SayItConfig()
 - `OutputFormat.Pcm_16Khz_16Bit` / `Pcm_24Khz_16Bit` / `Pcm_48Khz_16Bit`
 - `OutputFormat.Wav_16Khz_16Bit` / `Wav_24Khz_16Bit` / `Wav_48Khz_16Bit`
 
-## Samples
+## 📁 Samples
 
 | Sample | Description |
 |--------|-------------|
@@ -98,7 +98,7 @@ var config = new SayItConfig()
 | [`SayIt.Samples.Batch`](samples/SayIt.Samples.Batch) | Concurrent batch synthesis |
 | [`SayIt.Samples.Playback`](samples/SayIt.Samples.Playback) | Play audio with NAudio (external) |
 
-## How It Works
+## 🔍 How It Works
 
 SayIt uses the same WebSocket API that powers Microsoft Edge's "Read Aloud" feature.
 It connects to `speech.platform.bing.com` with an Edge-emulated User-Agent, sends SSML,

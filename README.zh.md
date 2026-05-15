@@ -12,7 +12,7 @@
 dotnet add package SayIt
 ```
 
-## 快速开始
+## 🚀 快速开始
 
 ```csharp
 using SayIt;
@@ -28,7 +28,7 @@ await SayIt.SaveAsync("Bonjour", "greeting.mp3",
     new SayItConfig().WithVoice("fr-FR-DeniseNeural"));
 ```
 
-## 特性
+## ✨ 特性
 
 - **零配置** — 无需 API Key、无需注册、无需账号
 - **零外部依赖** — 仅使用 `System.Net.WebSockets` 和 `System.Text.Json`
@@ -38,9 +38,9 @@ await SayIt.SaveAsync("Bonjour", "greeting.mp3",
 - **流式输入** — 以 `IAsyncEnumerable<string>` 形式喂入文本（如 LLM 流式输出）
 - **可调节** — 控制语速、音高、音量、输出格式
 
-## API
+## 📖 API
 
-### 静态 API（一行式）
+### ⚡ 静态 API（一行式）
 
 | 方法 | 说明 |
 |------|------|
@@ -49,7 +49,7 @@ await SayIt.SaveAsync("Bonjour", "greeting.mp3",
 | `SayIt.StreamAsync(IAsyncEnumerable<string>, config?, ct?)` | 流式文本 → 音频流 |
 | `SayIt.ListVoicesAsync(ct?)` | 列出所有可用音色 |
 
-### 实例 API（可复用配置）
+### 🔧 实例 API（可复用配置）
 
 ```csharp
 var speaker = new SayItSpeaker(
@@ -65,7 +65,7 @@ await foreach (var chunk in speaker.StreamChunksAsync("测试"))
     // 处理每个音频块
 ```
 
-### 配置
+### ⚙️ 配置
 
 ```csharp
 var config = new SayItConfig()
@@ -77,7 +77,7 @@ var config = new SayItConfig()
     .WithTimeout(60);                           // 超时秒数
 ```
 
-### 输出格式
+### 🎵 输出格式
 
 - `OutputFormat.Mp3_24Khz_96Kbps`（默认）
 - `OutputFormat.Mp3_24Khz_48Kbps`
@@ -86,7 +86,7 @@ var config = new SayItConfig()
 - `OutputFormat.Pcm_16Khz_16Bit` / `Pcm_24Khz_16Bit` / `Pcm_48Khz_16Bit`
 - `OutputFormat.Wav_16Khz_16Bit` / `Wav_24Khz_16Bit` / `Wav_48Khz_16Bit`
 
-## 示例项目
+## 📁 示例项目
 
 | 示例 | 说明 |
 |------|------|
@@ -98,12 +98,12 @@ var config = new SayItConfig()
 | [`SayIt.Samples.Batch`](samples/SayIt.Samples.Batch) | 并发批量合成 |
 | [`SayIt.Samples.Playback`](samples/SayIt.Samples.Playback) | 用 NAudio 播放音频（外部依赖） |
 
-## 工作原理
+## 🔍 工作原理
 
 SayIt 使用与 Microsoft Edge "朗读" 功能相同的 WebSocket API。
 它通过模拟 Edge 浏览器的 User-Agent 连接到 `speech.platform.bing.com`，发送 SSML，
 实时接收 MP3 音频块。无需 Azure 订阅或 API Key。
 
-## 许可
+## 📄 许可
 
 MIT

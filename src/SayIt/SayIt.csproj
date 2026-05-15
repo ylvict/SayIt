@@ -6,7 +6,7 @@
     <RootNamespace>SayIt</RootNamespace>
     <AssemblyName>SayIt</AssemblyName>
     <PackageId>SayIt</PackageId>
-    <Version>1.0.5</Version>
+    <Version>1.0.6</Version>
     <Authors>ylvict</Authors>
     <Copyright>Copyright (c) 2026 ylvict</Copyright>
     <Description>Zero-dependency .NET text-to-speech SDK using Microsoft Edge's free online voices.</Description>

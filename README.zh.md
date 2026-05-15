@@ -106,4 +106,4 @@ SayIt 使用与 Microsoft Edge "朗读" 功能相同的 WebSocket API。
 
 ## 📄 许可
 
-MIT
+[MIT](LICENSE)

@@ -106,4 +106,4 @@ and receives MP3 audio chunks in real time. No Azure subscription or API key req
 
 ## License
 
-MIT
+[MIT](LICENSE)

@@ -5,21 +5,27 @@
     <LangVersion>9</LangVersion>
     <RootNamespace>SayIt</RootNamespace>
     <AssemblyName>SayIt</AssemblyName>
-    <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
     <PackageId>SayIt</PackageId>
-    <Version>1.0.4</Version>
-    <PackageReadmeFile>README.md</PackageReadmeFile>
+    <Version>1.0.5</Version>
     <Authors>ylvict</Authors>
+    <Copyright>Copyright (c) 2026 ylvict</Copyright>
     <Description>Zero-dependency .NET text-to-speech SDK using Microsoft Edge's free online voices.</Description>
     <PackageProjectUrl>https://github.com/ylvict/SayIt</PackageProjectUrl>
     <PackageLicenseExpression>MIT</PackageLicenseExpression>
+    <PackageIcon>icon.png</PackageIcon>
+    <PackageReadmeFile>README.md</PackageReadmeFile>
+    <PackageReleaseNotes>https://github.com/ylvict/SayIt/releases</PackageReleaseNotes>
+    <PackageTags>tts;text-to-speech;speech;edge;voice</PackageTags>
     <RepositoryUrl>https://github.com/ylvict/SayIt</RepositoryUrl>
     <RepositoryType>git</RepositoryType>
-    <PackageTags>tts;text-to-speech;speech;edge;voice</PackageTags>
     <IncludeSymbols>true</IncludeSymbols>
     <SymbolPackageFormat>snupkg</SymbolPackageFormat>
   </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)'=='Release'">
+    <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
+  </PropertyGroup>
   <ItemGroup>
+    <None Include="icon.png" Pack="true" PackagePath="\" />
     <None Include="..\..\README.md" Pack="true" PackagePath="\" />
     <None Include="..\..\README.zh.md" Pack="true" PackagePath="\" />
   </ItemGroup>

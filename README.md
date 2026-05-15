@@ -3,7 +3,7 @@
 Zero-dependency .NET text-to-speech SDK powered by Microsoft Edge's free online voices.
 No API keys, no registration, no external dependencies.
 
-> [**中文文档 → README.zh.md**](README.zh.md)
+> [**中文文档 → README.zh.md**](https://github.com/ylvict/SayIt/blob/main/README.zh.md)
 
 [![NuGet](https://img.shields.io/nuget/v/SayIt)](https://www.nuget.org/packages/SayIt)
 [![build](https://github.com/ylvict/SayIt/actions/workflows/ci.yml/badge.svg)](https://github.com/ylvict/SayIt/actions/workflows/ci.yml)

@@ -5,8 +5,10 @@ No API keys, no registration, no external dependencies.
 
 > [**中文文档 → README.zh.md**](README.zh.md)
 
-```xml
-<PackageReference Include="SayIt" Version="1.0.0" />
+[![NuGet](https://img.shields.io/nuget/v/SayIt)](https://www.nuget.org/packages/SayIt)
+
+```shell
+dotnet add package SayIt
 ```
 
 ## Quick Start

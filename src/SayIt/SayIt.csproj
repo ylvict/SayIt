@@ -7,7 +7,8 @@
     <AssemblyName>SayIt</AssemblyName>
     <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
     <PackageId>SayIt</PackageId>
-    <Version>1.0.0</Version>
+    <Version>1.0.1</Version>
+    <PackageReadmeFile>README.md</PackageReadmeFile>
     <Authors>SayIt</Authors>
     <Description>Zero-dependency .NET text-to-speech SDK using Microsoft Edge's free online voices.</Description>
     <PackageProjectUrl>https://github.com/sayit/sayit</PackageProjectUrl>
@@ -17,6 +18,10 @@
     <IncludeSymbols>true</IncludeSymbols>
     <SymbolPackageFormat>snupkg</SymbolPackageFormat>
   </PropertyGroup>
+  <ItemGroup>
+    <None Include="..\..\README.md" Pack="true" PackagePath="\" />
+    <None Include="..\..\README.zh.md" Pack="true" PackagePath="\" />
+  </ItemGroup>
   <ItemGroup>
     <PackageReference Include="System.Text.Json" Version="8.0.5" />
     <PackageReference Include="System.Threading.Tasks.Extensions" Version="4.5.4" />

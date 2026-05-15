@@ -90,13 +90,13 @@ var config = new SayItConfig()
 
 | Sample | Description |
 |--------|-------------|
-| `SayIt.Samples.File` | Basic text → file |
-| `SayIt.Samples.Stream` | Text → audio stream |
-| `SayIt.Samples.StreamingInput` | `IAsyncEnumerable<string>` → audio |
-| `SayIt.Samples.VoiceList` | Query and filter voices |
-| `SayIt.Samples.AdvancedConfig` | Rate/pitch/volume presets |
-| `SayIt.Samples.Batch` | Concurrent batch synthesis |
-| `SayIt.Samples.Playback` | Play audio with NAudio (external) |
+| [`SayIt.Samples.File`](samples/SayIt.Samples.File) | Basic text → file |
+| [`SayIt.Samples.Stream`](samples/SayIt.Samples.Stream) | Text → audio stream |
+| [`SayIt.Samples.StreamingInput`](samples/SayIt.Samples.StreamingInput) | `IAsyncEnumerable<string>` → audio |
+| [`SayIt.Samples.VoiceList`](samples/SayIt.Samples.VoiceList) | Query and filter voices |
+| [`SayIt.Samples.AdvancedConfig`](samples/SayIt.Samples.AdvancedConfig) | Rate/pitch/volume presets |
+| [`SayIt.Samples.Batch`](samples/SayIt.Samples.Batch) | Concurrent batch synthesis |
+| [`SayIt.Samples.Playback`](samples/SayIt.Samples.Playback) | Play audio with NAudio (external) |
 
 ## How It Works
 

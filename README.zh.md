@@ -90,13 +90,13 @@ var config = new SayItConfig()
 
 | 示例 | 说明 |
 |------|------|
-| `SayIt.Samples.File` | 基础文本 → 文件 |
-| `SayIt.Samples.Stream` | 文本 → 音频流 |
-| `SayIt.Samples.StreamingInput` | `IAsyncEnumerable<string>` → 音频 |
-| `SayIt.Samples.VoiceList` | 查询和筛选音色 |
-| `SayIt.Samples.AdvancedConfig` | 语速/音高/音量预设 |
-| `SayIt.Samples.Batch` | 并发批量合成 |
-| `SayIt.Samples.Playback` | 用 NAudio 播放音频（外部依赖） |
+| [`SayIt.Samples.File`](samples/SayIt.Samples.File) | 基础文本 → 文件 |
+| [`SayIt.Samples.Stream`](samples/SayIt.Samples.Stream) | 文本 → 音频流 |
+| [`SayIt.Samples.StreamingInput`](samples/SayIt.Samples.StreamingInput) | `IAsyncEnumerable<string>` → 音频 |
+| [`SayIt.Samples.VoiceList`](samples/SayIt.Samples.VoiceList) | 查询和筛选音色 |
+| [`SayIt.Samples.AdvancedConfig`](samples/SayIt.Samples.AdvancedConfig) | 语速/音高/音量预设 |
+| [`SayIt.Samples.Batch`](samples/SayIt.Samples.Batch) | 并发批量合成 |
+| [`SayIt.Samples.Playback`](samples/SayIt.Samples.Playback) | 用 NAudio 播放音频（外部依赖） |
 
 ## 工作原理
 

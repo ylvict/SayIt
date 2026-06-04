@@ -25,7 +25,7 @@ await using var audio = await SayIt.StreamAsync("Hello world");
 
 // Specify voice
 await SayIt.SaveAsync("Bonjour", "greeting.mp3",
-    new SayItConfig().WithVoice("fr-FR-DeniseNeural"));
+    new SayItConfig().WithVoice(VoiceId.FrFRDeniseNeural));
 ```
 
 ## ✨ Features
@@ -54,7 +54,7 @@ await SayIt.SaveAsync("Bonjour", "greeting.mp3",
 ```csharp
 var speaker = new SayItSpeaker(
     new SayItConfig()
-        .WithVoice("en-US-JennyNeural")
+        .WithVoice(VoiceId.EnUSJennyNeural)
         .WithRate("+20%")
         .WithPitch("-2st"));
 
@@ -69,13 +69,34 @@ await foreach (var chunk in speaker.StreamChunksAsync("Hi"))
 
 ```csharp
 var config = new SayItConfig()
-    .WithVoice("zh-CN-XiaoxiaoNeural")     // Voice name
+    .WithVoice(VoiceId.ZhCNXiaoxiaoNeural) // Voice name
     .WithRate("+30%")                        // Speech rate
     .WithPitch("-4st")                        // Voice pitch
     .WithVolume("150%")                       // Volume
     .WithFormat(OutputFormat.Webm_24Khz_16Bit_Opus)
     .WithTimeout(60);                           // Timeout in seconds
 ```
+
+### 🎤 Built-in Voices
+
+`VoiceId` provides compile-time safe access to 65+ commonly used voices across 20 languages:
+
+```csharp
+var config = new SayItConfig()
+    .WithVoice(VoiceId.ZhCNXiaoxiaoNeural)  // Chinese (Mandarin)
+    .WithVoice(VoiceId.EnUSJennyNeural)     // English (US)
+    .WithVoice(VoiceId.JaJPNanamiNeural)    // Japanese
+    .WithVoice(VoiceId.FrFRDeniseNeural);   // French
+```
+
+Alternatively, pass any voice name as a string (e.g., from `ListVoicesAsync()`):
+
+```csharp
+var voice = (await SayIt.ListVoicesAsync()).First();
+var config = new SayItConfig().WithVoice(voice.ShortName);
+```
+
+> For the complete list of 400+ voices, see [Microsoft's official TTS voice documentation](https://learn.microsoft.com/en-us/azure/ai-services/speech-service/language-support?tabs=tts) or call `SayIt.ListVoicesAsync()` at runtime.
 
 ### 🎵 Output Formats
 

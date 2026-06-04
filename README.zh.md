@@ -25,7 +25,7 @@ await using var audio = await SayIt.StreamAsync("Hello world");
 
 // 指定音色
 await SayIt.SaveAsync("Bonjour", "greeting.mp3",
-    new SayItConfig().WithVoice("fr-FR-DeniseNeural"));
+    new SayItConfig().WithVoice(VoiceId.FrFRDeniseNeural));
 ```
 
 ## ✨ 特性
@@ -54,7 +54,7 @@ await SayIt.SaveAsync("Bonjour", "greeting.mp3",
 ```csharp
 var speaker = new SayItSpeaker(
     new SayItConfig()
-        .WithVoice("zh-CN-XiaoxiaoNeural")
+        .WithVoice(VoiceId.ZhCNXiaoxiaoNeural)
         .WithRate("+20%")
         .WithPitch("-2st"));
 
@@ -69,13 +69,34 @@ await foreach (var chunk in speaker.StreamChunksAsync("测试"))
 
 ```csharp
 var config = new SayItConfig()
-    .WithVoice("zh-CN-XiaoxiaoNeural")     // 音色名称
+    .WithVoice(VoiceId.ZhCNXiaoxiaoNeural) // 音色名称
     .WithRate("+30%")                        // 语速
     .WithPitch("-4st")                        // 音高
     .WithVolume("150%")                       // 音量
     .WithFormat(OutputFormat.Webm_24Khz_16Bit_Opus)
     .WithTimeout(60);                           // 超时秒数
 ```
+
+### 🎤 内置音色
+
+`VoiceId` 提供编译期安全的音色选择，覆盖 20 种语言的 65+ 个常用音色：
+
+```csharp
+var config = new SayItConfig()
+    .WithVoice(VoiceId.ZhCNXiaoxiaoNeural)  // 中文（普通话）
+    .WithVoice(VoiceId.EnUSJennyNeural)     // 英语（美国）
+    .WithVoice(VoiceId.JaJPNanamiNeural)    // 日语
+    .WithVoice(VoiceId.FrFRDeniseNeural);   // 法语
+```
+
+也支持通过字符串动态指定音色（例如从 `ListVoicesAsync()` 获取）：
+
+```csharp
+var voice = (await SayIt.ListVoicesAsync()).First();
+var config = new SayItConfig().WithVoice(voice.ShortName);
+```
+
+> 完整 400+ 音色列表请参阅 [微软官方 TTS 音色文档](https://learn.microsoft.com/en-us/azure/ai-services/speech-service/language-support?tabs=tts) 或运行时调用 `SayIt.ListVoicesAsync()`。
 
 ### 🎵 输出格式
 

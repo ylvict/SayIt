@@ -12,7 +12,7 @@ namespace SayIt.Samples.AdvancedConfig
                 : "Welcome to SayIt! You can control rate, pitch, and volume.";
 
             var normal = new SayItConfig()
-                .WithVoice("en-US-JennyNeural");
+                .WithVoice(VoiceId.EnUSJennyNeural);
 
             var fast = normal.WithRate("+50%");
 

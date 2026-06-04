@@ -15,7 +15,7 @@
     <PackageIcon>icon.png</PackageIcon>
     <PackageReadmeFile>README.md</PackageReadmeFile>
     <PackageReleaseNotes>https://github.com/ylvict/SayIt/releases</PackageReleaseNotes>
-    <PackageTags>tts;text-to-speech;speech;edge;voice</PackageTags>
+    <PackageTags>tts;text-to-speech;speech-synthesis;dotnet;net;speech;edge;voice;audio;narration;websocket;microsoft-edge;tts-engine;text-to-speech-dotnet</PackageTags>
     <RepositoryUrl>https://github.com/ylvict/SayIt</RepositoryUrl>
     <RepositoryType>git</RepositoryType>
     <IncludeSymbols>true</IncludeSymbols>

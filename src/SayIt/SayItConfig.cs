@@ -36,6 +36,9 @@
         public SayItConfig WithVoice(string name) =>
             new(name, Rate, Pitch, Volume, Format, TimeoutSeconds);
 
+        public SayItConfig WithVoice(VoiceId voice) =>
+            new(voice.Name, Rate, Pitch, Volume, Format, TimeoutSeconds);
+
         public SayItConfig WithRate(string rate) =>
             new(VoiceName, rate, Pitch, Volume, Format, TimeoutSeconds);
 
